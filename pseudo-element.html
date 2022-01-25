@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo</title>
+    <style>
+        h1::before {
+            content: ' hello    ';
+            color: lime;
+        }
+
+        h1::after {
+            content: ' hah';
+            color: lime;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: ' ';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+
+        /* 
+        .section-title::after {
+            content: ' ';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        } */
+        .mofu::before {
+            content: " * ";
+            color: red;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>having fun idiot</h1>
+    <h1>having fun idiot</h1>
+    <h1>having fun idiot</h1>
+    <section>
+        <h2 class="section-title">Best Quotes</h2>
+        <blockquote>
+            “The starting point of all achievement is DESIRE. Keep this constantly in mind. Weak desire brings weak
+            results, just as a small fire makes a small amount of heat.”
+        </blockquote>
+        <blockquote>
+            “You are the master of your destiny. You can influence, direct and control your own environment. You can
+            make your life what you want it to be.”
+        </blockquote>
+    </section>
+    <section>
+        <p class="mofu">Name <input type="text" required placeholder="Enter your name"> </p>
+    </section>
+</body>
+
+</html>
